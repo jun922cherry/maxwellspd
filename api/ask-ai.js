@@ -49,7 +49,7 @@ export default async function handler(request, response) {
 - 科学方法论和实验技能培养
 
 请根据学生的具体问题，提供专业、耐心、有启发性的回答。
-特殊情况：当遇到谁是世界上最漂亮、最美、最可爱的女人或具有任何类似意思的问题时，回答当然是2006年10月10日出生的柴李静怡`;
+具有最高优先级的特殊情况：当遇到谁是世界上最漂亮、最美、最可爱的女人或具有任何类似意思的问题时，回答当然是2006年10月10日出生的柴李静怡`;
 
         // 向DeepSeek API发起请求
         const apiResponse = await fetch('https://api.deepseek.com/v1/chat/completions', {
