@@ -1,0 +1,10 @@
+/* Form Component Styles (initially moved as-is; to be refactored later) */
+
+select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #fff;
+}
+select:hover { border-color: #bbb; }
+select:focus { outline: none; box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.25); }
