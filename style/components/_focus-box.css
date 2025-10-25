@@ -1,0 +1,70 @@
+/* Focus Box component: highlight quantitative analysis content */
+
+.focus-box {
+  background-color: #f0f4f8;
+  border-left: 5px solid #4A90E2;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.focus-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #4A90E2, #357ABD, #4A90E2);
+  background-size: 200% 100%;
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.focus-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(74, 144, 226, 0.2);
+  border-left-color: #357ABD;
+}
+
+.focus-box p {
+  margin: 8px 0;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.focus-box:hover p { color: #2c3e50; }
+
+.focus-box .formula {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.focus-box:hover .formula { color: #4A90E2; }
+
+/* Insight box (migrated from legacy main.css) */
+.insight-box {
+  background-color: #eef7ff;     /* 淡雅的蓝色背景 */
+  border-left: 4px solid #007bff; /* 左侧强调线 */
+  padding: 12px;
+  margin: 12px 0;
+  border-radius: 4px;
+  font-size: 1.0em;
+  color: #333;
+}
+.insight-box code {
+  background-color: #dbeafba3;
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+}
